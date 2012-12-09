@@ -51,7 +51,7 @@ function getString(num, index){
 	var n1 = num - 1;
 	var n2 = num - 2;
 
-	if(n1 % 15 == 0){
+	if((index >= 1) && (n1 % 15 == 0)){
 		return 'Bazz';
 	}
 
