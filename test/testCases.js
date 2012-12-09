@@ -31,6 +31,11 @@ var getStringTest = new YAHOO.tool.TestCase({
 			YAHOO.util.Assert.areEqual('ERROR! Expects a number', result, "Expects a number");
 		},
 
+		testFizzBuzz : function(){
+			var result = getString(15);
+			YAHOO.util.Assert.areEqual('FizzBuzz', result, "should return 'FizzBuzz'");
+		},
+
 		testFizz : function(){
 			var result = getString(3);
 			YAHOO.util.Assert.areEqual('Fizz', result, "should return 'Fizz'");
@@ -39,11 +44,6 @@ var getStringTest = new YAHOO.tool.TestCase({
 		testBuzz : function(){
 			var result = getString(5);
 			YAHOO.util.Assert.areEqual('Buzz', result, "should return 'Buzz'");
-		},
-
-		testFizzBuzz : function(){
-			var result = getString(15);
-			YAHOO.util.Assert.areEqual('FizzBuzz', result, "should return 'FizzBuzz'");
 		},
 
 		testOriginal : function(){
