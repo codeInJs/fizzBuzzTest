@@ -51,11 +51,10 @@ function getString(num, index){
 	var n1 = num - 1;
 	var n2 = num - 2;
 
-	if((index >= 1) && (n1 % 15 == 0)){
+	if((index >= 2) && ((n1 % 5 == 0 && n2 % 3 == 0) || (n1 % 3 == 0 && n2 % 5 == 0)) || (index >= 1) && (n1 % 15 == 0)){
 		return 'Bazz';
 	}
 
 	return !(num % 3) ? !(num % 5) ? 'FizzBuzz' : 'Fizz' : !(num % 5) ? 'Buzz' : num;
-
 
 }
