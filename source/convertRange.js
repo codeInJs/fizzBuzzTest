@@ -23,7 +23,7 @@ function convertRange(range){
 	var len = range.length,
 	    output = '';
 	for(var i = 0; i < len; i++){
-		output += getString(range[i]) + ' ';
+		output += getString(range[i], i) + ' ';
 	}
 	return output;
 
@@ -35,25 +35,25 @@ function convertRange(range){
 	return <String / Number>	
 */
 
-function getString(num){
+function getString(num, index){
 	
 	if(typeof(num) !== 'number'){
 		return "ERROR! Expects a number";
 	}
+
 	/*
-	if(num % 3 == 0 && num % 5 == 0){
-		return "FizzBuzz";
-	}else if(num % 3 == 0 ){
-		return 'Fizz'; 
-	}else if(num % 5 == 0){
-		return 'Buzz';
-	}else{
-		return num;
+		Possible 'Bazz' numbers
+		n - 1 % 3 == 0  and n - 2 % 5 == 0 // Fizz Buzz Bazz
+		n - 1 % 5 == 0 and n - 2 % 3 == 0 // Buzz Fizz Bazz
+		n - 1 % 15 == 0 // FizzBuzz Bazz - A number is divisible by both 3 and 5, when they are multiples of 15.
+	*/
+
+	var n1 = num - 1;
+	var n2 = num - 2;
+
+	if(n1 % 15 == 0){
+		return 'Bazz';
 	}
-	*/
-	/*
-		do the above logic with a on liner;
-	*/
 
 	return !(num % 3) ? !(num % 5) ? 'FizzBuzz' : 'Fizz' : !(num % 5) ? 'Buzz' : num;
 
