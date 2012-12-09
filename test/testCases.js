@@ -17,7 +17,7 @@ var convertRangeTest = new YAHOO.tool.TestCase({
 
 	testFizzBuzzNum : function(){
 		var result = convertRange([10, 11, 12, 13, 14, 15, 16]);
-		YAHOO.util.Assert.areEqual('Buzz 11 Fizz 13 14 FizzBuzz 16', result, "");
+		YAHOO.util.Assert.areEqual('Buzz 11 Fizz 13 14 FizzBuzz 16 ', result, "");
 	}
 })
 
