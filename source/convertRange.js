@@ -36,6 +36,12 @@ function convertRange(range){
 */
 
 function getString(num){
+	if(typeof(num) !== 'number'){
+		return "ERROR! Expects a number";
+	}
 
+	if(num % 3 == 0 && num % 5 == 0){
+		return "FizzBuzz";
+	}
 
 }
