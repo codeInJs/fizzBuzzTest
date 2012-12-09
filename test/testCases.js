@@ -26,26 +26,31 @@ var getStringTest = new YAHOO.tool.TestCase({
 
 		name: getStringTest,
 	
+		testNumber : function(){
+			var result = getString('3');	
+			YAHOO.util.Assert.areEqual('ERROR! Expects a number', result, "Expects a number");
+		},
+
 		testFizz : function(){
 			var result = getString(3);
 			YAHOO.util.Assert.areEqual('Fizz', result, "should return 'Fizz'");
 		},
+
 		testBuzz : function(){
 			var result = getString(5);
 			YAHOO.util.Assert.areEqual('Buzz', result, "should return 'Buzz'");
 		},
+
 		testFizzBuzz : function(){
 			var result = getString(15);
 			YAHOO.util.Assert.areEqual('FizzBuzz', result, "should return 'FizzBuzz'");
 		},
+
 		testOriginal : function(){
 			var result = getString(2);	
 			YAHOO.util.Assert.areEqual(2, result, "should return the original num");
-		},
-		testNumber : function(){
-			var result = getString('3');	
-			YAHOO.util.Assert.areEqual('ERROR! Expects a number', result, "Expects a number");
 		}
+		
 
 })	
 	
