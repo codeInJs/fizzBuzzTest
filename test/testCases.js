@@ -61,6 +61,10 @@ var getStringTest = new YAHOO.tool.TestCase({
 			var result = getString(7, 2);
 			YAHOO.util.Assert.areEqual('Bazz', result, "should return 'Bazz'");
 		},
+		testBuzz_FizzNum : function(){
+			var result = getString(7, 1);
+			YAHOO.util.Assert.areEqual(7, result, "should return 7");
+		},
 
 		testFizzBuzzBazz : function(){
 			var result = getString(16, 1);
