@@ -11,6 +11,22 @@
 */
 
 function convertRange(range){
+	// check for array
+	if(Object.prototype.toString.call( range ) !== '[object Array]'){
+		return "ERROR! Expects an array";
+	}
+
+	if(range.length <= 0){
+		return "ERROR! Array is Empty";
+	}
+
+	var len = range.length,
+	    output = '';
+	for(var i = 0; i < len; i++){
+		output += getString(range[i]) + ' ';
+	}
+	return output;
+
 
 }
 
