@@ -17,7 +17,8 @@ var convertRangeTest = new YAHOO.tool.TestCase({
 
 	testFizzBuzzNum : function(){
 		var result = convertRange([10, 11, 12, 13, 14, 15, 16]);
-		YAHOO.util.Assert.areEqual('Buzz 11 Fizz 13 14 FizzBuzz 16 ', result, "");
+		console.log(result);
+		YAHOO.util.Assert.areEqual('Buzz 11 Fizz 13 14 FizzBuzz Bazz ', result, "");
 	}
 })
 
@@ -27,32 +28,37 @@ var getStringTest = new YAHOO.tool.TestCase({
 		name: getStringTest,
 	
 		testNumber : function(){
-			var result = getString('3', 1);	
+			var result = getString('3', 2);	
 			YAHOO.util.Assert.areEqual('ERROR! Expects a number', result, "Expects a number");
 		},
 
 		testFizzBuzz : function(){
-			var result = getString(15, 1);
+			var result = getString(15, 2);
 			YAHOO.util.Assert.areEqual('FizzBuzz', result, "should return 'FizzBuzz'");
 		},
 
 		testFizz : function(){
-			var result = getString(3, 1);
+			var result = getString(3, 2);
 			YAHOO.util.Assert.areEqual('Fizz', result, "should return 'Fizz'");
 		},
 
 		testBuzz : function(){
-			var result = getString(5, 1);
+			var result = getString(5, 2);
 			YAHOO.util.Assert.areEqual('Buzz', result, "should return 'Buzz'");
 		},
 
 		testFizz_BuzzBazz : function(){
-			var result = getString(11, 1);
+			var result = getString(11, 2);
 			YAHOO.util.Assert.areEqual('Bazz', result, "should return 'Bazz'");
 		},
 
+		testFizz_BuzzNum : function(){
+			var result = getString(11, 1);
+			YAHOO.util.Assert.areEqual(11, result, "should return 11");
+		},
+
 		testBuzz_FizzBazz : function(){
-			var result = getString(7, 1);
+			var result = getString(7, 2);
 			YAHOO.util.Assert.areEqual('Bazz', result, "should return 'Bazz'");
 		},
 
@@ -61,7 +67,7 @@ var getStringTest = new YAHOO.tool.TestCase({
 			YAHOO.util.Assert.areEqual('Bazz', result, "should return 'Bazz'");
 		},
 
-		testFizzBuzzBazz : function(){
+		testBazzFirstItem : function(){
 			var result = getString(16, 0);
 			YAHOO.util.Assert.areEqual(16, result, "should return 16");
 		},
