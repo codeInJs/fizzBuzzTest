@@ -3,7 +3,7 @@
 
 var convertRangeTest = new YAHOO.tool.TestCase({
 
-	name : integratedTest,
+	name : convertRangeTest,
 
 	testArray : function(){
 		var result = convertRange({test: 'return false'});
@@ -24,7 +24,7 @@ var convertRangeTest = new YAHOO.tool.TestCase({
 
 var getStringTest = new YAHOO.tool.TestCase({
 
-		name: getString,
+		name: getStringTest,
 	
 		testFizz : function(){
 			var result = getString(3);
@@ -52,8 +52,8 @@ var getStringTest = new YAHOO.tool.TestCase({
 YAHOO.util.Event.onDOMReady(function (){
 	//create the logger
 	var logger = new YAHOO.tool.TestLogger("testLogger");
-	YAHOO.tool.TestRunner.add(integratedTest);
-	YAHOO.tool.TestRunner.add(getString);
+	YAHOO.tool.TestRunner.add(convertRangeTest);
+	YAHOO.tool.TestRunner.add(getStringTest);
     //run the tests
 	YAHOO.tool.TestRunner.run();
 });
